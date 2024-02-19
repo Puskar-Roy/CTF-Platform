@@ -9,7 +9,7 @@ import { NavbarItems, NavbarData } from "@/utlis/data";
 
 const NavItem = ({ href, tags }: NavbarItems) => {
   return (
-    <li>
+    <li className="hover:text-indigo-700">
       <Link href={href}>
         {tags}
       </Link>
