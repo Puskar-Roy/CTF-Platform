@@ -5,24 +5,24 @@ export interface NavbarItems{
 }
 
 export const NavbarData: NavbarItems[] = [
-    {
-        href:"/",
-        tags:"Home"
-    },
-    {
-        href:"/dashboard",
-        tags:"Dashboard"
-    },{
-        href:"/about",
-        tags:"About"
-    },
-    {
-        href:"/contact",
-        tags:"Contact"
-    },
-    {
-        href:"/joinus",
-        tags:"Join Us"
-    }
-
+  {
+    href: "/",
+    tags: "Home",
+  },
+  {
+    href: "/problems",
+    tags: "Problems",
+  },
+  {
+    href: "/leaderboard",
+    tags: "Leaderboard",
+  },
+  {
+    href: "/contact",
+    tags: "Contact",
+  },
+  {
+    href: "/joinus",
+    tags: "Join Us",
+  },
 ];
