@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import logo from "@/public/logo.png";
+import logo from "@/public/logo1.png";
 import Image from "next/image";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
@@ -22,11 +22,11 @@ const Navbar: React.FC = () => {
     setOpen(!open);
   };
   return (
-    <header className="bg-transparent fixed top-0 shadow-xl w-screen">
+    <header className="bg-white fixed top-0 shadow-xl w-screen z-10">
       <nav className="px-9 flex justify-between items-center w-screen sm:w-[80%] mx-[auto] my-0 h-20 ">
         <div className="flex items-center gap-2 text-xl font-bold">
           <Image src={logo} alt="logo" height={40} width={40} />
-          Its Bold
+          CTF Competition
         </div>
         <div className="sm:hidden" onClick={handleMenuClick}>
           {open ? (
