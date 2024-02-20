@@ -21,6 +21,6 @@ const userSchema = new Schema<Users>(
 
 
 
-const User = model<Users>("ctf-users", userSchema);
+const User = model<Users>("ctf-users-v0.0", userSchema);
 
 export default User;
