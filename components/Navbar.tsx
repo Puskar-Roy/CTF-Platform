@@ -10,14 +10,13 @@ import { NavbarItems, NavbarData } from "@/utlis/data";
 const NavItem = ({ href, tags }: NavbarItems) => {
   return (
     <li className="hover:text-indigo-700">
-      <Link href={href}>
-        {tags}
-      </Link>
+      <Link href={href}>{tags}</Link>
     </li>
   );
 };
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const status = false;
   const handleMenuClick: () => void = () => {
     setOpen(!open);
   };
@@ -38,27 +37,38 @@ const Navbar: React.FC = () => {
         <div
           className={
             open
-              ? "sm:hidden absolute top-0 left-0 h-screen w-[300px] flex justify-center items-center bg-gray-200 backdrop-blur-sm rounded-lg"
-              : "sm:hidden absolute top-0 left-[-100%] h-screen w-[300px] flex justify-center items-center bg-gray-200 backdrop-blur-sm rounded-lg"
+              ? "sm:hidden absolute top-0 left-0 h-screen w-[300px] flex justify-center items-center  backdrop-blur-[150px] rounded-2xl transition-all duration-700 shadow-lg"
+              : "sm:hidden absolute top-0 left-[-100%] h-screen w-[300px] flex justify-center items-center  backdrop-blur-[1px] rounded-2xl transition-all duration-700 shadow-lg"
           }
         >
           <ul className="flex flex-col gap-[30px]">
-            {NavbarData.map(({ href, tags }: NavbarItems) => (
-              <NavItem key={href} href={href} tags={tags} />
-            ))}
+            {status ? (
+              NavbarData.map(({ href, tags }: NavbarItems) => (
+                <NavItem key={href} href={href} tags={tags} />
+              ))
+            ) : (
+              <button className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white">
+                Sign in / Sign up
+              </button>
+            )}
           </ul>
         </div>
         <div className="hidden sm:block">
           <ul className="flex gap-[30px]">
-            {NavbarData.map(({ href, tags }: NavbarItems) => (
-              <NavItem key={href} href={href} tags={tags} />
-            ))}
+            {status ? (
+              NavbarData.map(({ href, tags }: NavbarItems) => (
+                <NavItem key={href} href={href} tags={tags} />
+              ))
+            ) : (
+              <button className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white">
+                Sign in / Sign up
+              </button>
+            )}
           </ul>
         </div>
       </nav>
     </header>
   );
 };
-
 
 export default Navbar;
