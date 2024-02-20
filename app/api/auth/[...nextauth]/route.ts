@@ -3,7 +3,6 @@ import GoogleProvider from "next-auth/providers/google";
 import { GoogleProviderConfig } from "@/interfaces";
 import connect from "@/utlis/db";
 import User from "@/models/userSchema";
-import { Account, User as AuthUser } from "next-auth";
 
 const handler = NextAuth({
   providers: [
@@ -15,6 +14,10 @@ const handler = NextAuth({
   callbacks: {
     async signIn(params) {
       const { user, account } = params;
+      console.log(user);
+      console.log(account);
+      console.log(account?.provider);
+      
       if (account?.provider == "google") {
         await connect();
         try {

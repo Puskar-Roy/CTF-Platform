@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import mongoose, { Schema, model } from "mongoose";
 import { Users } from "@/interfaces";
 
 const userSchema = new Schema<Users>(
@@ -20,7 +20,7 @@ const userSchema = new Schema<Users>(
 );
 
 
+export default mongoose.models.User ||
+  mongoose.model<Users>("ctf-users-v0.0", userSchema);
 
-const User = model<Users>("ctf-users-v0.0", userSchema);
-
-export default User;
+// export default User;
