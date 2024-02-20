@@ -1,8 +1,4 @@
-export interface NavbarItems{
-    href: string;
-    tags : string;
-
-}
+import { NavbarItems } from "@/interfaces";
 
 export const NavbarData: NavbarItems[] = [
   {
@@ -16,13 +12,5 @@ export const NavbarData: NavbarItems[] = [
   {
     href: "/leaderboard",
     tags: "Leaderboard",
-  },
-  {
-    href: "/contact",
-    tags: "Contact",
-  },
-  {
-    href: "/joinus",
-    tags: "Join Us",
-  },
+  }
 ];
