@@ -8,6 +8,7 @@ import { IoMdClose } from "react-icons/io";
 import { NavbarData } from "@/utlis/data";
 import { NavbarItems } from "@/interfaces";
 import { useSession, signOut } from "next-auth/react";
+import { log } from "console";
 
 const NavItem = ({ href, tags }: NavbarItems) => {
   return (
@@ -20,6 +21,8 @@ const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
   const status = false;
   const session = useSession();
+
+  
   const handleMenuClick: () => void = () => {
     setOpen(!open);
   };
