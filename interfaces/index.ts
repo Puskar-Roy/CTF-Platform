@@ -13,3 +13,10 @@ export interface GoogleProviderConfig {
 export interface AuthProviderProps {
   children: ReactNode;
 }
+
+
+export interface Users{
+  email: string;
+  image?:string;
+  name?:string;
+}
