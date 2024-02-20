@@ -12,19 +12,15 @@ const handeler = NextAuth({
     } as GoogleProviderConfig),
   ],
   callbacks: {
-    async signIn({ user, account }) {
-      if (account?.provider == "credentials") {
-        return true;
-      }
-      if (account?.provider == "google") {
+    async signIn(params) {
+      const { user, account } = params;
+      if (account?.provider == "github") {
         await connect();
         try {
           const existingUser = await User.findOne({ email: user.email });
           if (!existingUser) {
             const newUser = new User({
               email: user.email,
-              name:user.name,
-              image:user.image,
             });
 
             await newUser.save();
@@ -36,7 +32,7 @@ const handeler = NextAuth({
           return false;
         }
       }
-    },
+    return false;
   },
 });
 
