@@ -8,7 +8,7 @@ import { IoMdClose } from "react-icons/io";
 import { NavbarData } from "@/utlis/data";
 import { NavbarItems } from "@/interfaces";
 import { useSession, signOut } from "next-auth/react";
-import { log } from "console";
+
 
 const NavItem = ({ href, tags }: NavbarItems) => {
   return (

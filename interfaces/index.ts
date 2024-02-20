@@ -15,8 +15,20 @@ export interface AuthProviderProps {
 }
 
 
-export interface Users{
+export interface Users {
   email: string;
-  image?:string;
-  name?:string;
+  image?: string;
+  name?: string;
+  questionsDone?: string[];
+  totalScore?: number;
+}
+
+export interface Questions {
+  title: string;
+  description: string;
+  category: string;
+  points: number;
+  flag?: string;
+  isSolved?: boolean;
+  // answeredCorrectly: { type: Boolean; default: false };
 }
