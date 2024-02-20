@@ -4,7 +4,8 @@ import { GoogleProviderConfig } from "@/interfaces";
 import connect from "@/utlis/db";
 import User from "@/models/userSchema";
 import { Account, User as AuthUser } from "next-auth";
-const handeler = NextAuth({
+
+const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -32,8 +33,9 @@ const handeler = NextAuth({
           return false;
         }
       }
-    return false;
+      return false; // Return false if the account provider is not "github"
+    },
   },
 });
 
-export { handeler as GET, handeler as POST };
+export { handler as GET, handler as POST };
