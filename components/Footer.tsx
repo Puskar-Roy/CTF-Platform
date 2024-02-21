@@ -4,7 +4,7 @@ import Image from "next/image";
 import logo from '@/public/logo1.png'
 function Footer() {
   return (
-    <footer className="bg-white rounded-lg shadow  m-4">
+    <footer className="bg-white rounded-lg  m-4">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link

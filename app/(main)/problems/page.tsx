@@ -152,9 +152,12 @@ const page = () => {
         <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
           Previous
         </button>
-        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
+        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-[1.1rem] py-3 text-white">
           Next
         </button>
+      </div>
+      <div className="w-[85%] border-b-4 border-gray-200">
+
       </div>
     </div>
   );
