@@ -1,10 +1,23 @@
-
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import Image from "next/image";
 import image from "@/public/server-support-header-image.png";
+import { useSession } from "next-auth/react";
+import Loading from "@/components/loading";
+import AuthError from "@/components/authError";
+
 
 const page = () => {
 
+  const { status: sessionStatus } = useSession();
+
+  if (sessionStatus === "loading") {
+    return <Loading/>;
+  }
+
+  if (sessionStatus === "unauthenticated") {
+    return <AuthError/>;
+  }
 
   return (
     <div className="flex flex-col justify-center items-center mt-[20vh]">
