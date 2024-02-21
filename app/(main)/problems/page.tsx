@@ -109,7 +109,7 @@ const page = () => {
           </div>
         </div>
 
-        <div className="w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
+        <div className="w-[90%] sm:w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
           <QustionCards
             title="Bug Hunter"
             category="Web"
@@ -148,7 +148,7 @@ const page = () => {
           />
         </div>
       </div>
-      <div className="w-[65%] sm:w-[60%] sm:ml-[270px] flex justify-between">
+      <div className="w-[80%] sm:w-[60%] sm:ml-[270px] flex justify-between">
         <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
           Previous
         </button>
