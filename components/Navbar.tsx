@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     setOpen(!open);
   };
   return (
-    <header className="bg-white fixed top-0 shadow-xl w-screen z-10">
+    <header className="bg-white fixed top-0 shadow-xl w-screen z-[103]">
       <nav className="px-9 flex justify-between items-center w-screen sm:w-[80%] mx-[auto] my-0 h-20 ">
         <Link href="/">
           <div className="flex items-center gap-2 text-xl font-bold">
