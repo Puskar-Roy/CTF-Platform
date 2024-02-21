@@ -108,7 +108,7 @@ const page = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
           <QustionCards
             title="Bug Hunter"
@@ -147,7 +147,14 @@ const page = () => {
             description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
           />
         </div>
-        
+      </div>
+      <div className="w-[65%] sm:w-[60%] sm:ml-[270px] flex justify-between">
+        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
+          Previous
+        </button>
+        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
+          Next
+        </button>
       </div>
     </div>
   );
