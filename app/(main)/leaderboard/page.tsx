@@ -1,13 +1,10 @@
-"use client"
+
 import React from "react";
 import Image from "next/image";
 import image from "@/public/server-support-header-image.png";
-import { useSession } from "next-auth/react";
+
 const page = () => {
-  const { data: session, status } = useSession();
-  if (status === "unauthenticated") {
-    return <p>Access Denied</p>;
-  }
+
 
   return (
     <div className="flex flex-col justify-center items-center mt-[20vh]">
