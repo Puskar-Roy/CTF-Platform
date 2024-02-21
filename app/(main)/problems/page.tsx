@@ -1,11 +1,6 @@
-"use client"
 import React from 'react'
 import QustionCards from '@/components/QustionCards';
-
-import { useRouter } from "next/navigation";
 const page = () => {
-  const router = useRouter();
-
   return (
     <div className="flex h-auto flex-col justify-center items-center mt-[20vh] gap-[5rem]  sm:gap-[4rem]">
       <div className="absolute circlePosition w-screen sm:w-[590px] h-[400px] bg-gradient-to-r from-indigo-500 rounded-[100%] top-[50%] left-[50%]  blur-[90px] translate-x-[-50%] translate-y-[-50%] z-[-1]" />

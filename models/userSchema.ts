@@ -13,15 +13,15 @@ const userSchema = new Schema<Users>(
       unique: true,
     },
     image: {
-      type: String
-    }
+      type: String,
+    },
   },
   { timestamps: true }
 );
 
+// let dbName = "User-dev";
+// if (process.env.ENV === "PROD") {
+//   dbName = "User";
+// }
 
-const UserModel = model<Users>("User", userSchema);
-export default UserModel;
-
-
-
+export default mongoose.models.User || mongoose.model("User", userSchema);
