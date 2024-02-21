@@ -6,6 +6,8 @@ import AuthError from "@/components/authError";
 import { IoFilter } from "react-icons/io5";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
+import dummyQuestions from "@/utlis/data";
+import { Questions } from '@/interfaces'
 
 const page = () => {
   const { status: sessionStatus } = useSession();
@@ -110,42 +112,17 @@ const page = () => {
         </div>
 
         <div className="w-[90%] sm:w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
-          <QustionCards
-            title="Bug Hunter"
-            category="Web"
-            points={100}
-            description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
-          />
+          {dummyQuestions.map(
+            ({ title, category, points, description }: Questions) => (
+              <QustionCards
+                key={title}
+                title={title}
+                category={category}
+                points={points}
+                description={description}
+              />
+            )
+          )}
         </div>
       </div>
       <div className="w-[80%] sm:w-[60%] sm:ml-[270px] flex justify-between">
@@ -156,9 +133,7 @@ const page = () => {
           Next
         </button>
       </div>
-      <div className="w-[85%] border-b-4 border-gray-200">
-
-      </div>
+      <div className="w-[85%] border-b-4 border-gray-200"></div>
     </div>
   );
 };
