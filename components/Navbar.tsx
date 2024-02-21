@@ -10,9 +10,9 @@ import { NavbarItems } from "@/interfaces";
 import { useSession, signOut } from "next-auth/react";
 
 
-const NavItem = ({ href, tags }: NavbarItems) => {
+const NavItem = ({ href, tags , onClick }: NavbarItems) => {
   return (
-    <li className="hover:text-indigo-700">
+    <li className="hover:text-indigo-700" onClick={onClick}>
       <Link href={href}>{tags}</Link>
     </li>
   );
@@ -52,10 +52,16 @@ const Navbar: React.FC = () => {
           <ul className="flex flex-col gap-[30px]">
             {session.status === "authenticated" ? (
               NavbarData.map(({ href, tags }: NavbarItems) => (
-                <NavItem key={href} href={href} tags={tags} />
+                <NavItem
+                  key={href}
+                  href={href}
+                  tags={tags}
+                  onClick={handleMenuClick}
+                />
               ))
             ) : (
               <Link
+                onClick={handleMenuClick}
                 href="/authentication"
                 className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white"
               >
@@ -63,7 +69,12 @@ const Navbar: React.FC = () => {
               </Link>
             )}
             {session.status === "authenticated" && (
-              <div onClick={()=>{signOut()}} className="flex gap-2 font-bold text-indigo-500 items-center cursor-pointer">
+              <div
+                onClick={() => {
+                  signOut();
+                }}
+                className="flex gap-2 font-bold text-indigo-500 items-center cursor-pointer"
+              >
                 <Image
                   src={session.data?.user?.image ?? logo}
                   alt="Logo"
@@ -80,10 +91,16 @@ const Navbar: React.FC = () => {
           <ul className="flex gap-[30px]">
             {session.status === "authenticated" ? (
               NavbarData.map(({ href, tags }: NavbarItems) => (
-                <NavItem key={href} href={href} tags={tags} />
+                <NavItem
+                  key={href}
+                  href={href}
+                  tags={tags}
+                  onClick={handleMenuClick}
+                />
               ))
             ) : (
               <Link
+                onClick={handleMenuClick}
                 href="/authentication"
                 className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white"
               >
@@ -91,7 +108,12 @@ const Navbar: React.FC = () => {
               </Link>
             )}
             {session.status === "authenticated" && (
-              <div onClick={()=>{signOut()}} className="flex gap-2 font-bold text-indigo-500 items-center justify-center  cursor-pointer">
+              <div
+                onClick={() => {
+                  signOut();
+                }}
+                className="flex gap-2 font-bold text-indigo-500 items-center justify-center  cursor-pointer"
+              >
                 <Image
                   src={session.data?.user?.image ?? logo}
                   alt="Logo"

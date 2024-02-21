@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 export interface NavbarItems {
   href: string;
   tags: string;
+  onClick?: () => void;
 }
 
 export interface GoogleProviderConfig {

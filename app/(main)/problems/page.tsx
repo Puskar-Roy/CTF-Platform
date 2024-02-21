@@ -6,11 +6,6 @@ import AuthError from "@/components/authError";
 import { IoFilter } from "react-icons/io5";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { MdOutlineWeb } from "react-icons/md";
-import { SiLetsencrypt } from "react-icons/si";
-import { FaGenderless } from "react-icons/fa";
-import { VscDebugReverseContinue } from "react-icons/vsc";
-import { FaBorderAll } from "react-icons/fa6";
 
 const page = () => {
   const { status: sessionStatus } = useSession();
@@ -55,26 +50,26 @@ const page = () => {
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-lg">Topics</h1>
-          <ul className="flex flex-col gap-2 font-base">
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+          <ul className="flex flex-col gap-3 font-base">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               All
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               Web Exploitation
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               Cryptography
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               Reverse Engineering
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               Forensics
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               General Skills
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
               Binary Exploitation
             </li>
           </ul>
@@ -113,6 +108,7 @@ const page = () => {
             </ul>
           </div>
         </div>
+        
         <div className="w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
           <QustionCards
             title="Bug Hunter"
@@ -151,6 +147,7 @@ const page = () => {
             description="lorem hjshj sjdhsjhd dskjdksjd isjdisid suidusiud hkhdkshd skdhskhd kshdkshdks hihdieh ish fishk osijfisjf ishfkshfksn skfhsih8fh sifhsifhkfheiwhfwhf 8wy Description of question 1"
           />
         </div>
+        
       </div>
     </div>
   );
