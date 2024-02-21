@@ -1,8 +1,15 @@
+"use client"
 import React from 'react'
-import Image from 'next/image';
-import image from '@/public/server-support-header-image.png'
 import QustionCards from '@/components/QustionCards';
+import { useSession, getSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 const page = () => {
+  const router = useRouter();
+    const { data: session, status } = useSession();
+
+    if (status !== "authenticated") {
+      router.push("/authentication");
+    }
   return (
     <div className="flex h-auto flex-col justify-center items-center mt-[20vh] gap-[5rem]  sm:gap-[4rem]">
       <div className="absolute circlePosition w-screen sm:w-[590px] h-[400px] bg-gradient-to-r from-indigo-500 rounded-[100%] top-[50%] left-[50%]  blur-[90px] translate-x-[-50%] translate-y-[-50%] z-[-1]" />
