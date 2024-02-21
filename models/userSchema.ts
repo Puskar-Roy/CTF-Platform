@@ -20,7 +20,8 @@ const userSchema = new Schema<Users>(
 );
 
 
-export default mongoose.models.User ||
-  mongoose.model<Users>("ctf-users-v0.0", userSchema);
+const UserModel = model<Users>("User", userSchema);
+export default UserModel;
+
 
 

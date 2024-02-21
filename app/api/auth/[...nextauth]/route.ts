@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { GoogleProviderConfig } from "@/interfaces";
 import connect from "@/utlis/db";
-import User from "@/models/userSchema";
+import UserModel from "@/models/userSchema";
 
 const handler = NextAuth({
   providers: [
@@ -14,19 +14,15 @@ const handler = NextAuth({
   callbacks: {
     async signIn(params) {
       const { user, account } = params;
-      console.log(user);
-      console.log(account);
-      console.log(account?.provider);
-      
       if (account?.provider == "google") {
         await connect();
         try {
-          const existingUser = await User.findOne({ email: user.email });
+          const existingUser = await UserModel.findOne({ email: user.email });
           if (!existingUser) {
-            const newUser = new User({
+            const newUser = new UserModel({
               email: user.email,
-              name:user.name,
-              image:user.image
+              name: user.name,
+              image: user.image,
             });
 
             await newUser.save();
@@ -38,7 +34,7 @@ const handler = NextAuth({
           return false;
         }
       }
-      return false; // Return false if the account provider is not "github"
+      return false; 
     },
   },
 });
