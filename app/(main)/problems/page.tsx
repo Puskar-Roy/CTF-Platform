@@ -126,10 +126,10 @@ const page = () => {
         </div>
       </div>
       <div className="w-[80%] sm:w-[60%] sm:ml-[270px] flex justify-between">
-        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-4 py-2 text-white">
+        <button className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-4 py-2 text-white">
           Previous
         </button>
-        <button className="bg-indigo-500 hover:bg-indigo-800 font-medium text-base rounded-xl px-[1.1rem] py-3 text-white">
+        <button className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-[1.1rem] py-3 text-white">
           Next
         </button>
       </div>

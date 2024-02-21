@@ -30,7 +30,7 @@ const ctfQuestions: Questions[] = [
   {
     title: "Web Exploitation",
     description:
-      "Find and exploit the vulnerability in the provided web application to retrieve the flag.",
+      "Find the vulnerability in the provided web to retrieve the flag.",
     category: "Web Security",
     points: 200,
     flag: "WEB_FLAG",
