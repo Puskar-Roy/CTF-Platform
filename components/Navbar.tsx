@@ -9,8 +9,7 @@ import { NavbarData } from "@/utlis/data";
 import { NavbarItems } from "@/interfaces";
 import { useSession, signOut } from "next-auth/react";
 
-
-const NavItem = ({ href, tags , onClick }: NavbarItems) => {
+const NavItem = ({ href, tags, onClick }: NavbarItems) => {
   return (
     <li className="hover:text-indigo-700" onClick={onClick}>
       <Link href={href}>{tags}</Link>
@@ -19,10 +18,13 @@ const NavItem = ({ href, tags , onClick }: NavbarItems) => {
 };
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [openp, setOpenp] = useState<boolean>(false);
   const status = false;
   const session = useSession();
 
-  
+  const handleProfClick: () => void = () => {
+    setOpenp(!openp);
+  };
   const handleMenuClick: () => void = () => {
     setOpen(!open);
   };
@@ -70,9 +72,7 @@ const Navbar: React.FC = () => {
             )}
             {session.status === "authenticated" && (
               <div
-                onClick={() => {
-                  signOut();
-                }}
+                onClick={handleProfClick}
                 className="flex gap-2 font-bold text-indigo-500 items-center cursor-pointer"
               >
                 <Image
@@ -87,6 +87,43 @@ const Navbar: React.FC = () => {
             )}
           </ul>
         </div>
+        <ul
+          className={
+            openp
+              ? "absolute z-[1000] float-left m-0 top-[65vh] sm:top-[70px] right-[155px] sm:right-[150px] w-[30vw] sm:w-[12vw] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg "
+              : "absolute z-[1000] float-left m-0 top-[70px] right-[-150000000px] w-[12vw] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg "
+          }
+          aria-labelledby="dropdownMenuButton2"
+          data-te-dropdown-menu-ref
+        >
+          <li>
+            <Link
+              className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal  hover:bg-neutral-100  "
+              href="#"
+              
+            >
+              Profile
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal  hover:bg-neutral-100  "
+              href="#"
+              
+            >
+              Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal  hover:bg-neutral-100  "
+              href="#"
+              onClick={()=>signOut()}
+            >
+              Sign Out
+            </Link>
+          </li>
+        </ul>
         <div className="hidden sm:block">
           <ul className="flex gap-[30px]">
             {session.status === "authenticated" ? (
@@ -109,9 +146,7 @@ const Navbar: React.FC = () => {
             )}
             {session.status === "authenticated" && (
               <div
-                onClick={() => {
-                  signOut();
-                }}
+                onClick={handleProfClick}
                 className="flex gap-2 font-bold text-indigo-500 items-center justify-center  cursor-pointer"
               >
                 <Image
