@@ -31,5 +31,6 @@ export interface Questions {
   points: number;
   flag?: string;
   isSolved?: boolean;
+  addilinks?:string;
   // answeredCorrectly: { type: Boolean; default: false };
 }

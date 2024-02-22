@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QustionCards from "@/components/QustionCards";
 import Loading from "@/components/loading";
 import AuthError from "@/components/authError";
@@ -7,11 +7,43 @@ import { IoFilter } from "react-icons/io5";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import dummyQuestions from "@/utlis/data";
-import { Questions } from '@/interfaces'
+import { Questions } from "@/interfaces";
 
 const page = () => {
   const { status: sessionStatus } = useSession();
   const [open, setOpen] = useState<boolean>(false);
+  const [problems, setProblems] = useState<Questions[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const fetchProblems = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch(`/api/problems?page=${currentPage}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch problems");
+      }
+      const data = await response.json();
+      setProblems(data.data);
+      setLoading(false);
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    fetchProblems();
+  }, [currentPage]);
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  if (loading) {
+    return <Loading />;
+  }
   if (sessionStatus === "loading") {
     return <Loading />;
   }
@@ -112,7 +144,7 @@ const page = () => {
         </div>
 
         <div className="w-[90%] sm:w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
-          {dummyQuestions.map(
+          {problems.map(
             ({ title, category, points, description }: Questions) => (
               <QustionCards
                 key={title}
@@ -126,10 +158,17 @@ const page = () => {
         </div>
       </div>
       <div className="w-[80%] sm:w-[60%] sm:ml-[270px] flex justify-between">
-        <button className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-4 py-2 text-white">
+        <button
+          onClick={handlePrevPage}
+          disabled={currentPage === 1}
+          className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-4 py-2 text-white"
+        >
           Previous
         </button>
-        <button className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-[1.1rem] py-3 text-white">
+        <button
+          onClick={handleNextPage}
+          className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-[1.1rem] py-3 text-white"
+        >
           Next
         </button>
       </div>

@@ -4,7 +4,7 @@ import { GoogleProviderConfig } from "@/interfaces";
 import connect from "@/utlis/db";
 import UserModel from "@/models/userSchema";
 
-const handler = NextAuth({
+export const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

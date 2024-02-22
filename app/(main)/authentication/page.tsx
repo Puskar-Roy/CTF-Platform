@@ -8,7 +8,7 @@ const page = () => {
     const { data: session, status: sessionStatus } = useSession();
      useEffect(() => {
        if (sessionStatus === "authenticated") {
-         router.replace("/");
+         router.replace("/problems");
        }
      }, [sessionStatus, router]);
   return (
