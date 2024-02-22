@@ -6,7 +6,6 @@ import AuthError from "@/components/authError";
 import { IoFilter } from "react-icons/io5";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import dummyQuestions from "@/utlis/data";
 import { Questions } from "@/interfaces";
 
 const page = () => {

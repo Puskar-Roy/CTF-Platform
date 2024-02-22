@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid } from 'react-loader-spinner'
-
+import { Grid } from "react-loader-spinner";
+import Navbar from "./Navbar";
 
 const Loading = () => {
   return (
