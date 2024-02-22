@@ -43,7 +43,7 @@ function Footer() {
         <span className="block text-sm text-gray-500 sm:text-center ">
           © Design And Devloped By{" "}
           <Link href="https://puskarroy.site" className="hover:underline">
-            Puskar Roy™
+            Puskar Roy
           </Link>
         </span>
       </div>

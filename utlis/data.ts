@@ -76,3 +76,13 @@ const dummyQuestions: Questions[] = ctfQuestions;
 
 
 export default dummyQuestions;
+
+
+export const initialQuestion: Questions = {
+  title: "",
+  description: "",
+  category: "",
+  points: 0,
+  flag: "",
+  isSolved: false,
+};

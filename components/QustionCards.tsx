@@ -1,8 +1,19 @@
 import React from "react";
 import { Questions } from "@/interfaces";
-const QustionCards = ({ title, description, category, points }: Questions) => {
+import Link from "next/link";
+
+const QustionCards = ({
+  title,
+  description,
+  category,
+  points,
+  _id,
+}: Questions) => {
   return (
-    <div className="w-[300px] h-[250px] sm:w-[300px] bg-[white]/40 backdrop-blur-[150px] mx-auto my-0 flex flex-col gap-4 shadow-xl p-7 rounded-2xl z-2 hover:bg-gray-200">
+    <Link
+      href={`/problems/${_id}`}
+      className="w-[300px] h-[250px] sm:w-[300px] bg-[white]/40 backdrop-blur-[150px] mx-auto my-0 flex flex-col gap-4 shadow-xl p-7 rounded-2xl z-2 hover:bg-gray-200"
+    >
       <div className="flex flex-col gap-1">
         <h1 className="text-[1.5rem] text-start font-bold">{title}</h1>
         <div className="flex flex-col justify-between">
@@ -16,7 +27,7 @@ const QustionCards = ({ title, description, category, points }: Questions) => {
         </div>
       </div>
       <h3 className="font-base font-[0.5rem] text-black">{description}</h3>
-    </div>
+    </Link>
   );
 };
 
