@@ -144,15 +144,14 @@ const page = () => {
 
         <div className="w-[90%] sm:w-[70%] mx-auto my-0 flex justify-center items-center flex-wrap gap-x-[5px] gap-y-[30px]">
           {problems.map(
-            ({ title, category, points, description , _id  }: Questions) => (
+            ({ title, category, points, description, _id }: Questions) => (
               <QustionCards
                 key={title}
                 title={title}
                 category={category}
                 points={points}
-                description={description}
+                description={description.substring(0, 95)}
                 _id={_id}
-            
               />
             )
           )}

@@ -26,7 +26,7 @@ const QustionCards = ({
           </div>
         </div>
       </div>
-      <h3 className="font-base font-[0.5rem] text-black">{description}</h3>
+      <h3 className="font-base font-[0.5rem] text-black">{description}{"..."} <span className="text-indigo-500 font-bold">more</span></h3>
     </Link>
   );
 };
