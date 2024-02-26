@@ -27,3 +27,23 @@ export async function GET(
     );
   }
 }
+
+
+
+
+export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+  try {
+    await connect();
+    const body: { flag: string } = await req.json();
+    const qustion = await QuestionModel.findById(params.id);
+    if(body.flag == qustion.flag){
+      
+      return NextResponse.json(
+        { success: true, message: "Your Flag Is Right!" },
+        { status: HttpStatusCode.Created }
+      );
+      
+    }
+
+  } catch (error) {}
+}

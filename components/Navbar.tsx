@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import logo from "@/public/logo1.png";
+import logo from "@/public/logo3.png";
 import Image from "next/image";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         <Link href="/">
           <div className="flex items-center gap-2 text-xl font-bold">
             <Image src={logo} alt="logo" height={40} width={40} />
-            CTF Competition
+            bingoCTF
           </div>
         </Link>
         <div className="sm:hidden" onClick={handleMenuClick}>

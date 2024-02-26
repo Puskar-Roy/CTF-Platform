@@ -11,6 +11,8 @@ export async function POST(req: NextRequest) {
     const body: Questions = await req.json();
     if (body.title && body.points && body.category && body.flag && body.description) {
       const product = await QuestionModel.create(body);
+      console.log(product);
+      
       return NextResponse.json(
         { success:true, message: "Your qustion has been created" },
         { status: HttpStatusCode.Created }

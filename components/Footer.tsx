@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/public/logo1.png'
+import logo from '@/public/logo3.png'
 function Footer() {
   return (
     <footer className="bg-white rounded-lg  m-4">
@@ -13,7 +13,7 @@ function Footer() {
           >
             <Image src={logo} alt="logo" height={40} width={40} />
             <span className="self-center text-2xl font-semibold whitespace-nowrap ">
-              The CodeBird
+              bingoCTF
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">

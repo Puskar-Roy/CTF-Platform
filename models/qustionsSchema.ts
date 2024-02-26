@@ -1,5 +1,6 @@
 import mongoose, { Schema, model } from "mongoose";
 import { Questions } from "@/interfaces";
+import { link } from "fs";
 
 
 const questionSchema = new Schema<Questions>(
@@ -24,11 +25,10 @@ const questionSchema = new Schema<Questions>(
       type: String,
       required: true,
     },
-    isSolved: {
-      type: Boolean,
-      default: false,
-    },
     addilinks: {
+      type: String,
+    },
+    link: {
       type: String,
     },
   },

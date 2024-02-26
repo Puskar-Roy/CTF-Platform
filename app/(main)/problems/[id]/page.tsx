@@ -76,7 +76,7 @@ const page = ({ params }: any) => {
               Given Resources
             </h1>
             <h2 className="font-bold text-sm sm:text-md text-indigo-500">
-              https://www.puskarroy.site
+              {problems.link}
             </h2>
           </div>
           <div className="flex flex-col  gap-3">
@@ -89,8 +89,8 @@ const page = ({ params }: any) => {
         <div className="mt-[40px] shadow-2xl rounded-2xl p-7 flex flex-col justify-start gap-6">
           <input
             type="text"
-            className="py-2 px-4 block w-full border-indigo-500 rounded-2xl text-base sm:text-lg focus:outline-indigo-600 "
-            placeholder="Flag Starts With : codebird"
+            className="py-2 bg-gray-200 px-4 block w-full border-indigo-500 rounded-2xl text-base sm:text-lg focus:outline-indigo-600 "
+            placeholder="Flag Starts With : bingo{}"
           />
           <button className="bg-indigo-500 w-full sm:w-[180px] border border-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white">
             Submit

@@ -33,5 +33,6 @@ export interface Questions {
   isSolved?: boolean;
   addilinks?:string;
   _id?:string;
+  link?:string;
   // answeredCorrectly: { type: Boolean; default: false };
 }
