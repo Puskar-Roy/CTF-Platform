@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from '@/public/logo3.png'
+import logo from '@/public/logo4.png'
 function Footer() {
   return (
     <footer className="bg-white rounded-lg  m-4">
@@ -11,7 +11,7 @@ function Footer() {
             href="/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <Image src={logo} alt="logo" height={40} width={40} />
+            <Image src={logo} alt="logo" height={70} width={70} />
             <span className="self-center text-2xl font-semibold whitespace-nowrap ">
               bingoCTF
             </span>
