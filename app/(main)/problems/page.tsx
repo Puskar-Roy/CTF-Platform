@@ -55,8 +55,8 @@ const page = () => {
   };
   return (
     <div className="flex h-auto flex-col justify-center items-center mt-[14vh] gap-[5rem]  sm:gap-[4rem]">
-      <div className="absolute circlePosition w-screen sm:w-[590px] h-[400px] bg-gradient-to-r from-indigo-500 rounded-[100%] top-[50%] left-[50%]  blur-[90px] translate-x-[-50%] translate-y-[-50%] z-[-1]" />
-      <h1 className="text-4xl sm:text-5xl text-center  text-indigo-500 font-bold">
+      <div className="absolute circlePosition w-screen sm:w-[590px] h-[400px] bg-gradient-to-r from-rose-500 rounded-[100%] top-[50%] left-[50%]  blur-[90px] translate-x-[-50%] translate-y-[-50%] z-[-1]" />
+      <h1 className="text-4xl sm:text-5xl text-center  text-rose-500 font-bold">
         Challenges
       </h1>
       <div
@@ -64,7 +64,7 @@ const page = () => {
         onClick={handleMenuClick}
       >
         <h2 className="text-center text-xl sm:text-xl font-medium text-gray-600">
-          Score : <span className="text-indigo-500 font-extrabold">10000</span>
+          Score : <span className="text-rose-500 font-extrabold">10000</span>
         </h2>
         <div className="flex gap-2 items-center justify-center text-center text-xl sm:hidden font-medium text-gray-600">
           <IoFilter className="text-2xl" />
@@ -84,25 +84,25 @@ const page = () => {
         <div className="flex flex-col gap-2">
           <h1 className="font-bold text-lg">Topics</h1>
           <ul className="flex flex-col gap-3 font-base">
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               All
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               Web Exploitation
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               Cryptography
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               Reverse Engineering
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               Forensics
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               General Skills
             </li>
-            <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-indigo-100 cursor-pointer">
+            <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-rose-100 cursor-pointer">
               Binary Exploitation
             </li>
           </ul>
@@ -117,25 +117,25 @@ const page = () => {
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-lg">Topics</h1>
             <ul className="flex flex-col gap-2 font-base">
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 All
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 Web Exploitation
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 Cryptography
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 Reverse Engineering
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 Forensics
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 General Skills
               </li>
-              <li className="shadow p-3 rounded-md hover:text-indigo-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
+              <li className="shadow p-3 rounded-md hover:text-rose-500 hover:font-bold hover:bg-gray-100 cursor-pointer">
                 Binary Exploitation
               </li>
             </ul>
@@ -161,13 +161,13 @@ const page = () => {
         <button
           onClick={handlePrevPage}
           disabled={currentPage === 1}
-          className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-4 py-2 text-white"
+          className="bg-rose-500 hover:bg-rose-800 shadow-xl font-medium text-base rounded-xl px-4 py-2 text-white"
         >
           Previous
         </button>
         <button
           onClick={handleNextPage}
-          className="bg-indigo-500 hover:bg-indigo-800 shadow-xl font-medium text-base rounded-xl px-[1.1rem] py-3 text-white"
+          className="bg-rose-500 hover:bg-rose-800 shadow-xl font-medium text-base rounded-xl px-[1.1rem] py-3 text-white"
         >
           Next
         </button>

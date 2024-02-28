@@ -11,7 +11,7 @@ import { useSession, signOut } from "next-auth/react";
 
 const NavItem = ({ href, tags, onClick }: NavbarItems) => {
   return (
-    <li className="hover:text-indigo-700" onClick={onClick}>
+    <li className="hover:text-rose-700" onClick={onClick}>
       <Link href={href}>{tags}</Link>
     </li>
   );
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               <Link
                 onClick={handleMenuClick}
                 href="/authentication"
-                className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white"
+                className="bg-rose-500 hover:bg-rose-800 rounded-xl px-4 py-2 text-white"
               >
                 Sign in / Sign up
               </Link>
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             {session.status === "authenticated" && (
               <div
                 onClick={handleProfClick}
-                className="flex gap-2 font-bold text-indigo-500 items-center cursor-pointer"
+                className="flex gap-2 font-bold text-rose-500 items-center cursor-pointer"
               >
                 <Image
                   src={session.data?.user?.image ?? logo}
@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
               <Link
                 onClick={handleMenuClick}
                 href="/authentication"
-                className="bg-indigo-500 hover:bg-indigo-800 rounded-xl px-4 py-2 text-white"
+                className="bg-rose-500 hover:bg-rose-800 rounded-xl px-4 py-2 text-white"
               >
                 Sign in / Sign up
               </Link>
@@ -147,7 +147,7 @@ const Navbar: React.FC = () => {
             {session.status === "authenticated" && (
               <div
                 onClick={handleProfClick}
-                className="flex gap-2 font-bold text-indigo-500 items-center justify-center  cursor-pointer"
+                className="flex gap-2 font-bold text-rose-500 items-center justify-center  cursor-pointer"
               >
                 <Image
                   src={session.data?.user?.image ?? logo}
