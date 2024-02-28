@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero: React.FC = () => {
@@ -21,7 +22,7 @@ const Hero: React.FC = () => {
           exploitation 💻, reverse engineering 🔍, and other related fields.
         </h2>
         <button className="bg-rose-500 hover:bg-rose-800 rounded-xl w-[18rem] px-4 py-2 text-white text-center mx-[auto] my-0 font-bold">
-          Start Solving 🚀
+          <Link href="/problems">Start Solving 🚀</Link>
         </button>
       </div>
 
