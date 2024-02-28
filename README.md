@@ -2,12 +2,10 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/Puskar-Roy/bingoCTF">
-    <img src="https://res.cloudinary.com/dky3cpvtf/image/upload/v1709153052/bingoCTF_xlbckm.jpg" alt="Logo" width="900" height="500">
-  </a>
-
-  <h3 align="center">bingoCTF - A CTF Platform For Beginner !</h3>
-
+  
+  ![bingoctfgogreenlandingpage](https://res.cloudinary.com/dky3cpvtf/image/upload/v1709153052/bingoCTF_xlbckm.jpg)
+  
+<h3 align="center">bingoCTF - A CTF Platform For Beginner !</h3>
   <p align="center">
     An Awesome CTF Platform to Jumpstart Your Cyber Security Journey, Helping You To Learn Cyber Security.
     <br />
