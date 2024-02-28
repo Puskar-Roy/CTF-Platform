@@ -85,6 +85,12 @@ const page = () => {
               >
                 {/* here */}
                 <option>All</option>
+                <option>Web Exploitation</option>
+                <option>Cryptography</option>
+                <option>Reverse Engineering</option>
+                <option>Forensics</option>
+                <option>General Skills</option>
+                <option>Binary Exploitation</option>
                 {/* here */}
               </select>
               <div className="pointer-events-none absolute pin-y pin-r flex items-center px-2 text-grey-darker">
