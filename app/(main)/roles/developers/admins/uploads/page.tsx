@@ -1,8 +1,16 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 const page = () => {
+  const { status: sessionStatus } = useSession();
+
   return (
     <div>
+      <h1 className="pt-12  text-4xl sm:text-5xl text-center  text-rose-500 font-bold">
+        Upload CTF Qustions
+      </h1>
       <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
         <div className="-mx-3 md:flex mb-6">
           <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -120,8 +128,13 @@ const page = () => {
           </div>
         </div>
       </div>
+      <div className="flex justify-center items-center mt-10">
+        <button className="bg-rose-500 hover:bg-rose-800 rounded-xl w-[18rem] px-4 py-2 text-white text-center mx-[auto] my-0 font-bold">
+          <Link href="/problems">Upload 🚀</Link>
+        </button>
+      </div>
     </div>
   );
-}
+};
 
-export default page
+export default page;
