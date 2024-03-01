@@ -22,6 +22,7 @@ export interface Users {
   name?: string;
   questionsDone?: string[];
   totalScore?: number;
+  role?:string;
 }
 
 export interface Questions {

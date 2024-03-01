@@ -15,6 +15,10 @@ const userSchema = new Schema<Users>(
     image: {
       type: String,
     },
+    role:{
+      type:String,
+      default:"User"
+    }
   },
   { timestamps: true }
 );
